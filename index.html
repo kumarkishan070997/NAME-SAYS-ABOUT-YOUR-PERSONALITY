@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+
+	<style>
+		body
+		{
+			margin: 0;
+			padding: 0;
+			background: #EA1F1F;
+		}
+		.centerdiv
+		{
+			height: 400px;
+			width: 60%;
+			background-color: #32DD1B;
+			margin-left: 20%;
+			margin-top: 10%;
+			border-radius: 5%;
+			border: 2px solid #fff;
+		}
+		.image
+		{
+
+			float: right;
+			margin-top: 90px;
+			margin-right: 20%;
+			border-radius: 5px;
+		}
+		.namediv
+		{
+			position: absolute;
+			margin-top: 100px;
+			margin-left: 15%;
+		}
+		.namediv label
+		{
+			font-weight: bold;
+			font-family: 'Noto Sans', sans-serif;
+			font-size: 24px;
+			color: 
+		}
+		input[type='text']
+		{
+			width: 190px;
+			margin-top: 20px;
+			height: 30px;
+			border-radius: 5px;
+			background-color: #EA1F1F;
+			text-align: center;
+			color: #fff;
+			font-weight: bold;
+
+		}
+		button
+		{
+			margin-top: 220px;
+			margin-left: 27%;
+			height: 40px;
+			width: 150px;
+			border-radius: 10px;
+			background-color: #4242E1;
+			font-weight: bold;
+			font-size: 18px;
+			color: #fff;
+		}
+		h1
+		{
+			position: absolute;
+			color: #fff;
+			font-family: 'Noto Sans', sans-serif;
+			font-weight: bold;
+			font-size: 24px;
+			margin-top: -70px;
+			margin-left: 27%;
+		}
+	</style>
+
+
+</head>
+<body>
+	<section>
+		<center><h1>WHAT YOUR NAME SAYS ABOUT YOUR PERSONALITY</h1></center>
+		<div class="centerdiv">
+			<div class="namediv">
+				<label>Enter Your Name</label><br>
+				<input type="text" name="name" id="nameid">
+			</div>
+			<div class="image">
+				<img src="back.jpg" width="200px" height="200px" id="image">
+			</div>
+			<button>Click Me</button>
+		</div>
+	</section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	
+	$(document).ready(function(){
+		$('button').click(function(){
+			const name=$('#nameid').val();
+			console.log()
+			// alert(name)
+			//document.getElementById("image").setAttribute("src","https://joeschmoe.io/api/v1/" + name)
+
+			$('#image')[0].setAttribute('src',"https://joeschmoe.io/api/v1/" + name);
+		})
+	});
+
+</script>
+</html>
